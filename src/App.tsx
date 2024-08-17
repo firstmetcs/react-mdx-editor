@@ -43,7 +43,7 @@ function App() {
       plugins={[
         toolbarPlugin({
           toolbarContents: () => (
-            <DiffSourceToggleWrapper>
+            <DiffSourceToggleWrapper options={['rich-text', 'source']}>
               <ConditionalContents
                 options={[
                   {
