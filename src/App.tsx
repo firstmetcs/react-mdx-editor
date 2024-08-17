@@ -21,15 +21,15 @@ function App() {
               <a href="/editor/demo">Home page</a>
             </li>
             <li>
-              <a className="text-accent-text" href="#">
+              <a className="text-accent-text" href="/#">
                 App News Editor
               </a>
             </li>
             <li>
-              <a href="#">News list</a>
+              <a href="/#">News list</a>
             </li>
             <li>
-              <a href="#">API Reference</a>
+              <a href="/#">API Reference</a>
             </li>
           </ul>
         </nav>
