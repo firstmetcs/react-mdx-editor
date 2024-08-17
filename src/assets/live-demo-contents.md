@@ -50,7 +50,7 @@ export default function App() {
 
 The block below is a live React component. You can configure multiple live code presets that specify the available npm packages and the default imports. You can also specify a default component that will be rendered in the live code block.
 
-```js
+```jsx
 export default function App() {
   return (
     <div>

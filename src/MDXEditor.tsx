@@ -108,9 +108,11 @@ function Editor() {
         codeMirrorPlugin({
           codeBlockLanguages: {
             js: 'JavaScript',
+            jsx: 'JavaScript (React)',
             css: 'CSS',
             txt: 'Plain Text',
-            tsx: 'TypeScript',
+            ts: 'TypeScript',
+            tsx: 'TypeScript (React)',
             '': 'Unspecified',
           },
         }),
