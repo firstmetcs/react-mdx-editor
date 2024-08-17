@@ -60,14 +60,14 @@ module.exports = {
 
             h1: {
               fontWeight: theme('fontWeight.semibold'),
-              borderBottom: `1px solid #ebedef`,
+              borderBottom: '1px solid #ebedef',
               paddingBottom: theme('spacing.3'),
               marginBottom: theme('spacing.0'),
             },
 
             h2: {
               fontWeight: theme('fontWeight.semibold'),
-              borderBottom: `1px solid #ebedef`,
+              borderBottom: '1px solid #ebedef',
               paddingBottom: theme('spacing.2'),
               marginBottom: theme('spacing.3'),
               marginTop: theme('spacing.6'),
