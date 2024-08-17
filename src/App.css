@@ -1,0 +1,7 @@
+.text-accent-text {
+  --tw-text-opacity: 1;
+  color: hsl(211 100% 43.2% / var(--tw-text-opacity));
+}
+.full-screen-mdxeditor [role='toolbar'] {
+  top: 65px;
+}

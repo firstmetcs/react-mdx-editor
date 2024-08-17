@@ -32,12 +32,12 @@ import {
 import '@mdxeditor/editor/style.css'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import markdown from '!!raw-loader!./assets/live-demo-contents.md'
-// import './App.css'
+import './App.css'
 
 function Editor() {
   return (
     <MDXEditor
-      className="prose max-w-none"
+      className="prose max-w-none full-screen-mdxeditor"
       autoFocus={{ defaultSelection: 'rootEnd' }}
       markdown={markdown}
       plugins={[
