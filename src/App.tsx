@@ -37,6 +37,7 @@ import markdown from '!!raw-loader!./assets/live-demo-contents.md'
 function App() {
   return (
     <MDXEditor
+      className="prose max-w-none"
       autoFocus={{ defaultSelection: 'rootEnd' }}
       markdown={markdown}
       plugins={[

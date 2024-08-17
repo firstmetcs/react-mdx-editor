@@ -1,3 +1,7 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.prose [data-lexical-decorator] > table [data-tool-cell] {
+  padding: 1px;
+  border: 0;
+  line-height: 1rem;
+  vertical-align: middle;
+}
+
+.prose .cm-content {
+  font-family: var(--font-ibm-plex-mono);
+  font-size: 0.8rem;
+  line-height: 1rem;
 }
