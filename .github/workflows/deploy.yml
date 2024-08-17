@@ -1,0 +1,48 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: 
+     - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        ref: master
+
+
+
+    - name: Setup Node        
+      uses: actions/setup-node@v1
+      with:
+        node-version: "18"
+
+    - name: Install and Build
+      run: |
+        npm install
+        npm run build
+        
+    # - name: Deploy to aliyun server
+    #   uses: easingthemes/ssh-deploy@v2.0.7
+    #   env:
+    #     SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
+    #     ARGS: "-avz --delete"
+    #     SOURCE: "public"
+    #     REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
+    #     REMOTE_USER: "root"
+    #     TARGET: "/root/dist/"
+
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "./build,!.git,!.github,!REDEME.md"
+        target: "/www/server/nginx/html/editor"
