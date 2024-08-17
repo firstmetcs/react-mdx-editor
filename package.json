@@ -2,6 +2,7 @@
   "name": "react-mdx-editor",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/editor/",
   "dependencies": {
     "@mdxeditor/editor": "^3.11.0",
     "@testing-library/jest-dom": "^5.17.0",
