@@ -5,3 +5,6 @@
 .full-screen-mdxeditor [role='toolbar'] {
   top: 65px;
 }
+.mdxeditor-popup-container {
+  z-index: 20;
+}
