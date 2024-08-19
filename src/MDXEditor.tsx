@@ -28,6 +28,7 @@ import {
   codeBlockPlugin,
   codeMirrorPlugin,
   linkPlugin,
+  markdownShortcutPlugin,
 } from '@mdxeditor/editor'
 import '@mdxeditor/editor/style.css'
 import i18next from 'i18next'
@@ -128,6 +129,7 @@ function Editor() {
             '': 'Unspecified',
           },
         }),
+        markdownShortcutPlugin(),
       ]}
       translation={(key, defaultValue, interpolations) => {
         return i18next.t(key, defaultValue, interpolations) as string
