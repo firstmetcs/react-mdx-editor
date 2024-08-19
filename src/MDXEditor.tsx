@@ -30,9 +30,21 @@ import {
   linkPlugin,
 } from '@mdxeditor/editor'
 import '@mdxeditor/editor/style.css'
+import i18next from 'i18next'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import markdown from '!!raw-loader!./assets/live-demo-contents.md'
 import './App.css'
+import zh_cn from './Editori18n'
+
+void i18next.init({
+  lng: 'zh_cn', // if you're using a language detector, do not define the lng option
+  // debug: true,
+  resources: {
+    zh_cn: {
+      translation: zh_cn,
+    },
+  },
+})
 
 function Editor() {
   return (
@@ -117,6 +129,9 @@ function Editor() {
           },
         }),
       ]}
+      translation={(key, defaultValue, interpolations) => {
+        return i18next.t(key, defaultValue, interpolations) as string
+      }}
     />
   )
 }
